@@ -366,7 +366,9 @@ void Charprint(char character)
   case '~':
     DLWrite(1, 1, 1, 1, 1, 1, 0);
     break;
-
+   case '€':
+    DLWrite(1, 1, 1, 1, 1, 1, 0);
+    break;
   default:
     break;
   }
@@ -467,6 +469,18 @@ void DLprint(String s)
     
   }
 }
+void DLrollDigi(int num)
+{
+  if(num>9999)
+  {
+    num=num%10000;
+  }
+for(int i=0;i<num;i++)
+  {
+  DLprint(i);
+  delay(1);
+  }
+}
 //---------------------------------------------------------------------------//
 void setup()
 {
@@ -483,7 +497,14 @@ void setup()
 void loop()
 {
 
- // DLprint(" 42%"); //pass
-  DLprint("sold out now "); //pass
+ // DLprint(" 42%");           //test pass
+ // DLWrite(0,0,0,0,0,1,0);    //test pass
+
+ // DLprint("sold out now ");  //test pass
+  DLrollDigi(random(9)*1000+random(9)*100+random(9)*10+random(9));
   delay(1000);
+  
+  delay(1000);
+   
+  
 }
