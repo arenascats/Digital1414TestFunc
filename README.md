@@ -4,7 +4,7 @@
 
 DLO1414,DLO1414,DLO1414还有个惠普的HPDL1414，都是这种四位显示屏，本身显示效果我觉得是还不错的。
 
-![Image](./doc/1.jpg)
+![Image](./1.jpg)
 
 这一次我也买了一些模块，那么要具体使用，我也会进行一个简单的说明，这是一个最低也要4.5V驱动的模块，但是逻辑电压可以不用很高，2V就可以。
 
@@ -12,23 +12,23 @@ DLO1414,DLO1414,DLO1414还有个惠普的HPDL1414，都是这种四位显示屏�
 
 首先它的引脚有这么多也就是12个，然后除去gnd和vcc以外，其他几个都要连到你的MCU，上面当然你可以使用其他一些方法，比如说I2C的扩展io口这类来减少这种引脚的使用。
 
-![Image](./doc/2.jpg)
+![Image](./2.jpg)
 
 这里我采用的是直接连接的方式，然后用的是Arduino 莱昂纳多，我买到的是从NOKIA设备上拆下的，所以长这样。这一个玩意现在价值人民币25元左右
 
 
-![Image](./doc/nokia0.webp)
+![Image](./nokia0.webp)
 
 如果你买到的和我的一样那么这一个模组的定义是这样的
-![Image](./doc/nokia.jpg)
+![Image](./nokia.jpg)
 
 
 ## 显示效果如下
   
 
 
-![Image](./doc/dis1.webp)
-![Image](./doc/dis2.webp)
+![Image](./dis1.webp)
+![Image](./dis2.webp)
 
 
 
@@ -96,7 +96,7 @@ void DLWrite(int i6, int i5, int i4, int i3, int i2, int i1, int i0)
 
 通过这张表，可以实现显示字符。然后读表时候需要注意的是，列是从下往上的。
 
-![Image](./doc/sheet.jpg)
+![Image](./sheet.jpg)
 
 当然，在实际的使用中并不会需要看表，我设计了这个函数，现在你可以像是一般打印一样简单并且快速的输入文字，并且显示出来
 
